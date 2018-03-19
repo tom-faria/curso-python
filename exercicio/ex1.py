@@ -20,6 +20,14 @@ def qntsvezes(numeros):
                 contador += 1
     print('A quantidade de vezes que o primeiro número repete é: %s' %(contador))
 
+def media(numeros):
+    for soma in numeros:
+        soma_int = int(soma)
+        soma_int += soma_int
+    tamanho = len(numeros)
+    medias = soma_int / tamanho
+    print('A média dos números digitados é: %s' %(medias))
+
 def menu():
     escolha = ''
     numeros = []
@@ -43,5 +51,7 @@ def menu():
             maior(numeros)
         if (escolha == '3'):
             qntsvezes(numeros)
+        if (escolha == '4'):
+            media(numeros)
 
 menu()
