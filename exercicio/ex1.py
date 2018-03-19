@@ -11,7 +11,14 @@ def listar(numeros):
 def maior(numeros):
     maior = max(numeros)
     print('O maior número é %s' %(maior))
-    
+
+def qntsvezes(numeros):
+    primeiro_numero = numeros[0]
+    contador = 0
+    for teste in numeros:
+        if(teste == primeiro_numero):
+                contador += 1
+    print('A quantidade de vezes que o primeiro número repete é: %s' %(contador))
 
 def menu():
     escolha = ''
@@ -34,5 +41,7 @@ def menu():
             listar(numeros)
         if (escolha == '2'):
             maior(numeros)
+        if (escolha == '3'):
+            qntsvezes(numeros)
 
 menu()
